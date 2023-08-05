@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins:wght@500;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a9037bba18.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        background-color: rgb(4, 4, 54);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(2, 2, 84);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(84, 84, 99);
+    }
+
+    .left {
+        font-size: 2rem;
+    }
+
+    .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 80px 0;
+
+    }
+
+    .leftsection {
+        width: 35%;
+        font-size: 2rem;
+
+    }
+
+    .rightsection {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .rightsection img {
+        margin: 30px 0;
+        width: 50%;
+
+    }
+
+    .purple {
+        color: blueviolet;
+    }
+
+    .secondsection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+    }
+
+    main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1.2px;
+        margin: 40px 84px;
+    }
+
+    .textgrey {
+        color: grey;
+    }
+
+    .box {
+        background: white;
+        width: 80vw;
+        height: 2px;
+        margin: 56px 0;
+        display: flex;
+    }
+
+    .vertical {
+        height: 50px;
+        width: 1px;
+        background: white;
+        margin: 0 100px;
+
+    }
+
+    .img-top {
+        width: 30px;
+        position: relative;
+        top: -35px;
+        left: -9px;
+    }
+
+    .verticaltext {
+        position: relative;
+        top: 25px;
+        left: -20px;
+    }
+
+    .img-top1 {
+        width: 15px;
+        position: relative;
+        top: -30px;
+        left: -9px;
+    }
+
+    .img-top2 {
+        width: 20px;
+        position: relative;
+        top: -27px;
+        left: -9px;
+
+    }
+
+    .img-top3 {
+        width: 17px;
+        position: relative;
+        top: -25px;
+        left: -9px;
+
+    }
+
+    .img-top4 {
+        width: 20px;
+        position: relative;
+        top: -25px;
+        left: -9px;
+
+    }
+
+    .btn-box {
+        display: inline-block;
+        padding: 12px 28px;
+        background: aqua;
+        border-radius: 40px;
+        font-size: 20px;
+        color: black;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 600;
+        margin: 0 100px;
+
+    }
+
+    .btn-box:hover {
+        color: gray;
+        font-size: 21px;
+
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding-bottom: 35px;
+
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 0 100px;
+
+    }
+
+    .about-content h2 {
+        text-align: left;
+        line-height: 1.2;
+
+    }
+
+    .about-content h3 {
+        font-size: 1.6rem;
+        margin: 0 100px;
+    }
+
+    .grey {
+        color: rgb(16, 157, 129);
+
+    }
+
+    .about-content p {
+        font-size: 13px;
+        margin: 20px 100px;
+    }
+
+    .projects {
+        padding-top: 35px;
+    }
+
+    .projects h2 {
+        margin-bottom: 5rem;
+
+    }
+
+    .project-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 0 50px;
+
+    }
+
+    .project-container .projects-box {
+        flex: 1 1 30rem;
+        padding: 50px 5px;
+        border-radius: 1.5rem;
+        text-align: center;
+        border: 5px solid rgb(78, 4, 152);
+        background: rgb(28, 3, 78);
+        transition: 0.5s ease;
+
+
+    }
+
+    .project-container .projects-box:hover {
+        border-color: rgb(28, 3, 78);
+        transform: scale(1.02);
+        border-color: rgb(5, 5, 98);
+
+
+    }
+
+    .projects-box p {
+        font-size: 15px;
+    }
+
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 1.5rem;
+
+    }
+
+    .portfolio-box1 img {
+        width: 390px;
+        position: relative;
+        top: 10px;
+        left: 20px;
+
+    }
+
+    .portfolio-box2 img {
+        width: 400px;
+        position: relative;
+        top: 10px;
+        left: 20px;
+
+    }
+
+    .portfolio-box3 img {
+        width: 400px;
+        position: relative;
+        top: 20px;
+        left: 20px;
+
+    }
+
+    .portfolio-box4 img {
+        width: 400px;
+        position: relative;
+        top: 10px;
+        left: 20px;
+
+    }
+
+    .portfolio-box5 img {
+        width: 400px;
+        position: relative;
+        top: 10px;
+        left: 20px;
+
+    }
+
+    .portfolio-box6 img {
+        width: 400px;
+        position: relative;
+        top: 10px;
+        left: 20px;
+
+    }
+
+    .portfolio-box1:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-box2:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-box3:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-box4:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-box5:hover img {
+        transform: scale(1.1);
+    }
+
+    .portfolio-box6:hover img {
+        transform: scale(1.1);
+    }
+
+    .heading1 {
+        padding-left: 50px;
+        font-size: 40px;
+
+    }
+
+    .contact {
+        padding: 200px 0px;
+    }
+
+    .contact-left {
+        flex-basis: 35%;
+    }
+
+    .contact-right {
+        flex-basis: 60%;
+    }
+
+    .contact-left p {
+        margin-top: 30px;
+
+    }
+
+    .contact-left p i {
+        color: red;
+        margin-right: 15px;
+        font-size: 25px;
+    }
+
+    .social-icons {
+        margin-top: 30px;
+
+    }
+
+    .social-icons a {
+        text-decoration: none;
+        font-size: 30px;
+        margin-right: 15px;
+        display: inline-block;
+        color: grey;
+        transition: transform 0.5s;
+
+
+    }
+
+    .social-icons a:hover {
+        color: aqua;
+        transform: translateY(-5px);
+
+    }
+
+    .contact form {
+        width: 30%;
+
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: rgb(27, 26, 26);
+        padding: 15px;
+        margin: 15px 0;
+        color: aqua;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+</style>
+
+<body>
+    <header>
+
+        <nav>
+            <div classs="left">My Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#firstsection">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Satyendra singh</span>
+                <div> and I am passionate </div>
+                <div>web developer</div>
+                <a href="https://drive.google.com/drive/u/0/my-drive" class="btn-box">Download resume</a>
+            </div>
+
+
+            <div class="rightsection">
+                <img src="assets/bg.png">
+            </div>
+
+
+        </section>
+        <section class="about">
+            <div class="about-content">
+                <h2 class="heading">About Me</h2>
+                <h3 class="grey">Passionate web developer</h3>
+                <p> I am Satyendra Singh, a driven and aspiring individual currently pursuing a B.Tech in Computer
+                    Science from IIIT Kalyani. As a beginner frontend developer, I find immense joy in creating visually
+                    appealing and user-friendly web applications. I am constantly exploring new technologies and staying
+                    up-to-date with the latest trends in web development to enhance my skills. Besides my passion for
+                    frontend development, I have a deep interest in competitive programming (CP), which allows me to
+                    apply my problem-solving abilities and logical thinking in coding competitions. With an insatiable
+                    thirst for knowledge and an eagerness to take on challenges, I am determined to make a significant
+                    mark in the fields of frontend development and competitive programming.
+                </p>
+                <a href="#" class="btn-box">Read More<a>
+
+            </div>
+        </section>
+        <hr>
+
+        <section class="projects">
+            <h2 class="heading">My projects</h2>
+            <div class="project-container">
+                <div class="projects-box">
+                    <h3>Rat in a Maze</h3>
+                    <p>A "Rat in a Maze" game is a popular problem that can be solved using backtracking algorithms. The
+                        objective of the game is to find a path from the starting point to the destination in a maze,
+                        where the rat can only move in four directions (up, down, left, and right) and cannot move
+                        through wall. o represent the maze, we can use a 2D array where each cell represents a position
+                        in the maze.
+                    </p>
+                </div>
+                <div class="projects-box">
+                    <h3>Encoder-Decoder</h3>
+                    <p>In computer science and information theory, encoding and decoding refer to the process of
+                        converting data from one format or representation to another. For example, you might want to
+                        encode some data into a specific format for transmission or storage and then decode it back to
+                        its original form when needed. The encoder and decoder work together to achieve this data
+                        transformation.</p>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+
+        <section class="portfolio">
+            <h2 class="heading">Achievments</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-box1">
+                    <img src="assets/s1.jpg">
+                </div>
+
+                <div class="portfolio-box2">
+                    <img src="assets/s2.jpg">
+                </div>
+
+                <div class="portfolio-box3">
+                    <img src="assets/s3.jpg">
+                </div>
+
+                <div class="portfolio-box4">
+                    <img src="assets/s4.jpg">
+                </div>
+
+                <div class="portfolio-box5">
+                    <img src="assets/s5.jpg">
+                </div>
+
+                <div class="portfolio-box6">
+                    <img src="assets/s6.jpg">
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="textgrey">What i have done so far</span>
+            <h1> Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="img-top" src="assets/html.png">
+                    <div class="verticaltext">
+                        HTML5
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top1" src="assets/css.png">
+                    <div class="verticaltext">
+                        CSS
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top2" src="assets/c.png">
+                    <div class="verticaltext">
+                        C Language
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top3" src="assets/js.png">
+                    <div class="verticaltext">
+                        Java Script
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top4" src="assets/python.png">
+                    <div class="verticaltext">
+                        Python
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="img-top4" src="assets/dsa.png">
+                    <div class="verticaltext">
+                        DSA
+                    </div>
+
+
+                </div>
+                <hr>
+
+            </div>
+            <div class="contact">
+                <div class="contact-left">
+                    <h1 class="heading1">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-envelope"></i>seenu5180singh@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>+91 9580341009</p>
+
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/satyendra-singh-8b265a255"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/satyendra_singh9580?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name">
+                        <input type="email" name="email" placeholder="Your Email">
+                        <input type="number" name="number" placeholder="Your Number">
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <a href="#" class="btn-box">Submit<a></a>
+
+                    </form>
+
+                </div>
+                <hr>
+
+
+
+
+        </section>
+    </main>
+
+
+</body>
+
+</html>
